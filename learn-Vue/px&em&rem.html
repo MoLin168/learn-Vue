@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字体计量单位补充</title>
+</head>
+<script>
+	//px：常见的设置font-size单位，这种是固定像素，是相对于浏览器分辨率而言的；
+	//em: 是相对长度单位，em的值不是固定的，是相对父级元素设置的字体大小而言，适用于响应式；
+	//rem:是CSS3的一个相对单位，也是相对长度单位，但是是相对文档根元素(document.documentElement)而言的，可通过它来整体调整文档流的文字大小
+	document.documentElement.style.fontSize = '10px';
+	/*
+		body是DOM对象里的body子节点，即body标签;
+		documentElement 是整个节点树的根节点root,即<html>标签;
+	*/
+</script>
+<style>
+	.test0{
+		font-size:2em;
+	}
+	.test1{
+		font-size: 20px;
+	}
+	.test2{
+		font-size: 2rem;
+	}
+</style>
+<body>
+	<div style="position: relative;left:0px;height:0px;">
+		<div class="test0">测试相对长度em</div>
+		<div class="test1">测试固定长度px</div>
+		<div class="test2">测试相对长度rem</div>
+	</div>
+</body>
+</html>
